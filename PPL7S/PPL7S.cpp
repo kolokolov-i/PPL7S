@@ -26,7 +26,6 @@ int main(int argc, char* argv[])
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &procCount);
-	//srand(time(NULL) + rank);
 	if (rank == 0) {
 		f_matrix = fopen("Matrix.txt", "r");
 		if (f_matrix) {
@@ -63,10 +62,7 @@ int main(int argc, char* argv[])
 					fscanf(f_matrix, "%d\n", &buf);
 					matrix[mSize * i + j] = matrix[mSize * i + j] = buf;
 				}
-				/*else {
-					matrix[mSize * i + j] = matrix[mSize * i + j] = rand() % 20;
-				}*/
-				printf("matrix(%d,%d) is %d\n", i, j, matrix[mSize * i + j]);
+				//printf("matrix(%d,%d) is %d\n", i, j, matrix[mSize * i + j]);
 			}
 		}
 		fclose(f_matrix);
@@ -82,7 +78,7 @@ int main(int argc, char* argv[])
 	//	{
 	//		for (j = 0; j < mSize; ++j)
 	//		{
-	//			printf("%d ", MatrixChunk[mSize * i + j]); // just for test
+	//			printf("%d ", MatrixChunk[mSize * i + j]);
 	//		}
 	//		printf("\n");
 	//	}
