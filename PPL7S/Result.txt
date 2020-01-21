@@ -1,0 +1,7 @@
+The min minWeight is -842150445
+ Edge 0 0
+Edge 1 0
+Edge 2 3
+Edge 3 1
+Edge 4 2
+Edge 5 0
